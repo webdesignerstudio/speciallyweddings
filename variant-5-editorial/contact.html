@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Specially Weddings</title>
+  <meta name="description" content="Neem contact op met Specially Weddings. Babs helpt jullie graag bij het organiseren van de perfecte bruiloft.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">SPECIALLY WEDDINGS</a>
+      <nav>
+        <button class="menu-toggle" aria-label="Menu openen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container reveal">
+        <h1>Contact</h1>
+        <p>Vertel me jullie verhaal — ik help jullie graag</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3>Direct contact</h3>
+            <p>
+              <strong>E-mail</strong><br>
+              <a href="mailto:info@speciallyweddings.nl">info@speciallyweddings.nl</a>
+            </p>
+            <p>
+              <strong>Telefoon</strong><br>
+              Wordt binnenkort toegevoegd
+            </p>
+            <p>
+              <strong>Werkgebied</strong><br>
+              Nederland, België &amp; daarbuiten
+            </p>
+            <p>
+              <strong>Reactietijd</strong><br>
+              Binnen 24 uur
+            </p>
+          </div>
+
+          <form class="contact-form reveal" action="mailto:info@speciallyweddings.nl" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="telefoon">Telefoonnummer</label>
+              <input type="tel" id="telefoon" name="telefoon">
+            </div>
+            <div class="form-group">
+              <label for="datum">Gewenste trouwdatum</label>
+              <input type="date" id="datum" name="datum">
+            </div>
+            <div class="form-group">
+              <label for="bericht">Jullie wensen</label>
+              <textarea id="bericht" name="bericht" placeholder="Vertel me wat jullie zoeken..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Verstuur bericht</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specially Weddings — 5 Ontwerpvarianten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.6;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .variants {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .variant-card {
+      border: 1px solid #333;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+    }
+    .variant-card:hover {
+      border-color: #fff;
+      transform: translateY(-4px);
+    }
+    .variant-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .variant-card p {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid #444;
+      margin-top: 1rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Specially Weddings</h1>
+  <p class="subtitle">Kies een ontwerpvariant om te bekijken</p>
+  <div class="variants">
+    <a href="variant-1-dark/index.html" class="variant-card">
+      <h3>Variant 1</h3>
+      <p>Dark Mode<br>Zwarte achtergrond, witte tekst</p>
+      <span class="tag">Zwart / Wit</span>
+    </a>
+    <a href="variant-2-elegant/index.html" class="variant-card">
+      <h3>Variant 2</h3>
+      <p>Classic Elegance<br>Crème/ivoor, zacht & luxe</p>
+      <span class="tag">Crème / Zwart</span>
+    </a>
+    <a href="variant-3-split/index.html" class="variant-card">
+      <h3>Variant 3</h3>
+      <p>Bold Split<br>Asymmetrisch, half/half</p>
+      <span class="tag">Contrast</span>
+    </a>
+    <a href="variant-4-gold/index.html" class="variant-card">
+      <h3>Variant 4</h3>
+      <p>Warm Gold Accent<br>Wit met gouden details</p>
+      <span class="tag">Goud accent</span>
+    </a>
+    <a href="variant-5-editorial/index.html" class="variant-card">
+      <h3>Variant 5</h3>
+      <p>Editorial Magazine<br>Foto-hero, magazine layout</p>
+      <span class="tag">Editorial</span>
+    </a>
+  </div>
+</body>
+</html>
