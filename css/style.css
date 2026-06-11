@@ -16,8 +16,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -72,9 +72,9 @@ section {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.95);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ffffff;
 }
 
 .site-header .container {
@@ -113,7 +113,7 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background: #000;
+  background: #ffffff;
   transition: width 0.3s;
 }
 
@@ -141,7 +141,7 @@ section {
   display: block;
   width: 28px;
   height: 2px;
-  background: #000;
+  background: #ffffff;
   transition: all 0.3s;
 }
 
@@ -153,16 +153,34 @@ section {
   justify-content: center;
   text-align: center;
   padding: 8rem 1.5rem 4rem;
-  background: #fff;
-  border-bottom: 1px solid #000;
+  background: #000;
+  background-image: url('../img/hero-beach-wedding.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  border-bottom: 2px solid #000;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 0;
 }
 
 .hero-content {
   max-width: 900px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
 .hero h1 {
   margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
 .hero-subtitle {
@@ -171,6 +189,7 @@ section {
   margin-bottom: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.9);
 }
 
 /* Buttons */
@@ -181,50 +200,81 @@ section {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 1rem 2.5rem;
-  border: 2px solid #000;
-  background: #000;
-  color: #fff;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #fff;
-  color: #000;
+  background: transparent;
+  color: #fff;
 }
 
 .btn-outline {
   background: transparent;
-  color: #000;
+  color: #fff;
 }
 
 .btn-outline:hover {
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 /* Intro Section */
 .intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 7rem 0;
 }
 
-.intro h2 {
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.intro-text h2 {
   margin-bottom: 1.5rem;
 }
 
-.intro p {
+.intro-text p {
   font-size: 1.15rem;
-  margin: 0 auto;
+  max-width: 55ch;
+}
+
+.intro-text .btn {
+  margin-top: 2.5rem;
+}
+
+.intro-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-img::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  height: 6px;
+  background: #ffffff;
 }
 
 /* Diensten Grid */
 .diensten-section {
   background: #000;
   color: #fff;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .diensten-section h2 {
@@ -241,30 +291,48 @@ section {
 .dienst-card {
   background: #111;
   border: 1px solid #333;
-  padding: 2.5rem 2rem;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .dienst-card:hover {
   border-color: #fff;
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+
+.dienst-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.dienst-card:hover .dienst-card-img {
+  filter: brightness(1);
+  transform: scale(1.03);
+}
+
+.dienst-card-body {
+  padding: 2rem 1.8rem 2.2rem;
 }
 
 .dienst-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.7rem;
 }
 
 .dienst-card p {
   font-size: 0.95rem;
-  opacity: 0.85;
+  opacity: 0.8;
   line-height: 1.6;
 }
 
 .dienst-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
 }
 
 /* Prijs Section */
@@ -289,6 +357,54 @@ section {
   margin-top: 1rem;
 }
 
+/* Inspiratie Strip */
+.inspiratie-strip {
+  padding: 0;
+  overflow: hidden;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.inspiratie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.inspiratie-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.inspiratie-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: brightness(0.9);
+}
+
+.inspiratie-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.inspiratie-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 /* CTA Section */
 .cta-section {
   background: #000;
@@ -310,7 +426,7 @@ section {
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid #000;
+  border-top: 1px solid #333;
   padding: 2.5rem 0;
   text-align: center;
 }
@@ -333,38 +449,105 @@ section {
 }
 
 /* Diensten Page */
+.diensten-list {
+  padding: 5rem 0;
+}
+
 .dienst-detail {
-  padding: 3rem 0;
-  border-bottom: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid #333;
 }
 
 .dienst-detail:last-child {
   border-bottom: none;
 }
 
-.dienst-detail h3 {
-  margin-bottom: 1rem;
+.dienst-detail.reverse {
+  direction: rtl;
 }
 
-.dienst-detail p {
-  opacity: 0.85;
+.dienst-detail.reverse > * {
+  direction: ltr;
+}
+
+.dienst-detail-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.dienst-detail-img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.dienst-detail-img:hover img {
+  transform: scale(1.04);
+}
+
+.dienst-detail-text h3 {
+  margin-bottom: 1.2rem;
+}
+
+.dienst-detail-text p {
+  opacity: 0.8;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
 .page-header {
-  padding: 10rem 0 4rem;
+  padding: 0;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #333;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.page-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-top: 8rem;
+  padding-bottom: 3.5rem;
 }
 
 .page-header h1 {
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .page-header p {
-  opacity: 0.7;
+  opacity: 0.85;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.95rem;
+  color: #fff;
 }
 
 /* Contact Page */
@@ -385,7 +568,7 @@ section {
 }
 
 .contact-info a {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   transition: opacity 0.3s;
 }
 
@@ -411,9 +594,9 @@ section {
 .form-group select {
   width: 100%;
   padding: 1rem;
-  border: 1px solid #000;
-  background: #fff;
-  color: #000;
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   transition: border-color 0.3s;
@@ -443,14 +626,14 @@ section {
     left: 0;
     width: 100%;
     height: calc(100vh - 70px);
-    background: #fff;
+    background: #000;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    border-left: 1px solid #000;
+    border-left: 1px solid #333;
   }
 
   .nav-links.open {
@@ -475,6 +658,41 @@ section {
   }
 
   .page-header {
-    padding: 7rem 0 3rem;
+    min-height: 280px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .intro-img {
+    order: -1;
+  }
+
+  .intro-img img {
+    height: 300px;
+  }
+
+  .inspiratie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiratie-item img {
+    height: 260px;
+  }
+
+  .dienst-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .dienst-detail.reverse {
+    direction: ltr;
+  }
+
+  .dienst-detail-img img {
+    height: 260px;
   }
 }
