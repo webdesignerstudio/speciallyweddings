@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Ideeen — Specially Weddings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: #000;
+      color: #fff;
+      padding: 3rem 2rem;
+      line-height: 1.4;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 0.1em;
+      opacity: 0.6;
+    }
+
+    /* ===== OPTIE 1: SVG met diamant op de i ===== */
+    .logo-svg {
+      display: inline-block;
+    }
+    .logo-svg text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.08em;
+      fill: #fff;
+    }
+    .diamond {
+      fill: #fff;
+    }
+
+    /* ===== OPTIE 2: CSS pseudo-element met kroon ===== */
+    .logo-css {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.08em;
+      color: #fff;
+      position: relative;
+      display: inline-block;
+    }
+    .logo-css .i-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .logo-css .i-wrap::after {
+      content: '\265B'; /* kroon unicode */
+      position: absolute;
+      top: -0.35em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.5em;
+      color: #fff;
+      line-height: 1;
+    }
+
+    /* ===== ANDERE IDEEEN ===== */
+    .idea {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      border: 1px solid #333;
+    }
+    .idea-label {
+      font-size: 0.9rem;
+      opacity: 0.5;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* 3. Hartje als punt op de i */
+    .logo-hart .i-wrap::after {
+      content: '\2665';
+      position: absolute;
+      top: -0.3em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.45em;
+      color: #fff;
+    }
+
+    /* 4. Ring/diamant boven de hele tekst */
+    .logo-ring {
+      position: relative;
+      display: inline-block;
+    }
+    .logo-ring::before {
+      content: '\25C7'; /* diamant outline */
+      position: absolute;
+      top: -0.6em;
+      left: 0.15em;
+      font-size: 0.35em;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    /* 5. Swash/versiering onder de tekst */
+    .logo-swash {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.3em;
+    }
+    .logo-swash::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+    }
+
+    /* 6. Ampersand tussen de woorden */
+    .logo-amp {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .logo-amp .amp {
+      font-size: 0.7em;
+      vertical-align: middle;
+      opacity: 0.6;
+      margin: 0 0.15em;
+    }
+
+    /* 7. Verticale lijn als scheiding */
+    .logo-line {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .logo-line .divider {
+      display: inline-block;
+      width: 2px;
+      height: 0.8em;
+      background: #fff;
+      opacity: 0.5;
+      vertical-align: middle;
+      margin: 0 0.2em;
+    }
+
+    /* 8. Initialen SW als monogram */
+    .logo-monogram {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .logo-monogram .sw {
+      display: inline-block;
+      border: 2px solid #fff;
+      padding: 0.1em 0.3em;
+      margin-right: 0.3em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>OPTIE 1 — SVG met diamant op de i</h2>
+  <svg class="logo-svg" viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="45">SPEC</text>
+    <text x="98" y="45">ALLY</text>
+    <!-- diamant op de i (x≈110, y≈14) -->
+    <polygon class="diamond" points="108,8 112,2 116,8 112,14"/>
+    <text x="138" y="45"> WEDDINGS</text>
+  </svg>
+
+  <h2>OPTIE 2 — CSS kroon op de i</h2>
+  <div class="logo-css">
+    SPEC<span class="i-wrap">I</span>ALLY WEDDINGS
+  </div>
+
+  <h2>ANDERE IDEEEN</h2>
+
+  <div class="idea">
+    <div class="idea-label">3. HARTJE ALS PUNT OP DE I</div>
+    <div class="logo-css logo-hart">
+      SPEC<span class="i-wrap">I</span>ALLY WEDDINGS
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="idea-label">4. DIAMANT BOVEN DE HELE TEKST</div>
+    <div class="logo-css logo-ring">
+      SPECIALLY WEDDINGS
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="idea-label">5. SWASH / LIJN ONDER DE TEKST</div>
+    <div class="logo-css logo-swash">
+      SPECIALLY WEDDINGS
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="idea-label">6. AMPERSAND TUSSEN DE WOORDEN</div>
+    <div class="logo-amp">
+      SPECIALLY <span class="amp">&</span> WEDDINGS
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="idea-label">7. VERTICALE LIJN ALS SCHEIDING</div>
+    <div class="logo-line">
+      SPECIALLY <span class="divider"></span> WEDDINGS
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="idea-label">8. MONOGRAM 'SW' + VOLLEDIGE TEKST</div>
+    <div class="logo-monogram">
+      <span class="sw">SW</span> SPECIALLY WEDDINGS
+    </div>
+  </div>
+
+</body>
+</html>
