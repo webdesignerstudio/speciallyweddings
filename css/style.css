@@ -583,6 +583,151 @@ section {
   color: #fff;
 }
 
+/* Over mij Page */
+.over-mij-intro {
+  padding: 6rem 0;
+}
+
+.over-mij-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.over-mij-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.over-mij-img img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.over-mij-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.over-mij-text p {
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+  line-height: 1.75;
+}
+
+/* Verwachtingen */
+.verwachtingen-section {
+  padding: 6rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.verwachtingen-section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.verwachtingen-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.verwachting-card {
+  padding: 2rem;
+  border: 1px solid #333;
+  transition: border-color 0.3s;
+}
+
+.verwachting-card:hover {
+  border-color: #fff;
+}
+
+.verwachting-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.verwachting-card p {
+  opacity: 0.8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Doelstelling */
+.doelstelling-section {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.doelstelling-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.doelstelling-lead {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doelstelling-section p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+  line-height: 1.75;
+}
+
+.doelstelling-section .btn {
+  margin-top: 1.5rem;
+}
+
+/* Over Babs kort (homepage) */
+.over-babs-kort {
+  padding: 6rem 0;
+  border-top: 1px solid #333;
+}
+
+.over-babs-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.over-babs-text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.over-babs-text p {
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+  line-height: 1.75;
+}
+
+.over-babs-text .btn {
+  margin-top: 1rem;
+}
+
+.over-babs-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.over-babs-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Contact Page */
 .contact-grid {
   display: grid;
@@ -727,5 +872,43 @@ section {
 
   .dienst-detail-img img {
     height: 260px;
+  }
+
+  .over-mij-grid,
+  .over-babs-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .over-mij-img img,
+  .over-babs-img img {
+    height: 320px;
+  }
+
+  .over-babs-img {
+    order: -1;
+  }
+
+  .verwachtingen-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .verwachting-card {
+    padding: 1.5rem;
+  }
+
+  .doelstelling-section {
+    padding: 4rem 0;
+  }
+
+  .doelstelling-lead {
+    font-size: 1.1rem;
+  }
+
+  .over-mij-intro,
+  .over-babs-kort,
+  .verwachtingen-section {
+    padding: 4rem 0;
   }
 }
