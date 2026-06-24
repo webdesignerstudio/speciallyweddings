@@ -729,29 +729,93 @@ section {
 }
 
 /* Contact Page */
-.contact-grid {
+
+/* WhatsApp Banner */
+.whatsapp-banner {
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.whatsapp-banner h2 {
+  margin-bottom: 0.8rem;
+}
+
+.whatsapp-banner p {
+  opacity: 0.85;
+  margin-bottom: 1.8rem;
+  font-size: 1.05rem;
+}
+
+/* Contact Layout */
+.contact-section {
+  padding: 5rem 0;
+}
+
+.contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: stretch;
 }
 
-.contact-info h3 {
-  margin-bottom: 1.5rem;
+/* Contact Visual (foto + overlay) */
+.contact-visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
 }
 
-.contact-info p {
-  margin-bottom: 1rem;
-  opacity: 0.85;
+.contact-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.contact-info a {
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.contact-details h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-details p {
+  margin-bottom: 1.3rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.contact-details a {
   border-bottom: 1px solid #fff;
   transition: opacity 0.3s;
 }
 
-.contact-info a:hover {
+.contact-details a:hover {
   opacity: 0.6;
+}
+
+/* Contact Form */
+.contact-form-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form {
+  padding: 2rem;
+  border: 1px solid #333;
 }
 
 .form-group {
@@ -788,8 +852,47 @@ section {
 }
 
 .form-group textarea {
-  min-height: 150px;
+  min-height: 120px;
   resize: vertical;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 5rem 0;
+  border-top: 1px solid #333;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.faq-item {
+  padding: 2rem;
+  border: 1px solid #333;
+  transition: border-color 0.3s;
+}
+
+.faq-item:hover {
+  border-color: #fff;
+}
+
+.faq-item h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.faq-item p {
+  opacity: 0.8;
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 /* Responsive */
@@ -830,9 +933,35 @@ section {
     padding: 7rem 1.5rem 3rem;
   }
 
-  .contact-grid {
+  .contact-layout,
+  .faq-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+
+  .contact-visual {
+    min-height: 400px;
+  }
+
+  .contact-overlay {
+    padding: 1.5rem;
+  }
+
+  .contact-details h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-banner {
+    padding: 3rem 0;
+  }
+
+  .faq-item {
+    padding: 1.5rem;
   }
 
   .page-header {

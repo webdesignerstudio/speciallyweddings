@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Specially Weddings</title>
-  <meta name="description" content="Neem contact op met Specially Weddings. Babs helpt jullie graag bij het organiseren van de perfecte bruiloft.">
+  <meta name="description" content="Neem contact op met Specially Weddings. Bel, app of mail Babs voor een vrijblijvend gesprek.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
   <main>
 
     <div class="page-header">
-      <div class="page-header-bg" style="background-image: url('img/buitenland-trouwen.jpg');"></div>
+      <div class="page-header-bg" style="background-image: url('img/contact-sfeer.jpg');"></div>
       <div class="page-header-overlay"></div>
       <div class="container reveal">
         <h1>Contact</h1>
@@ -42,62 +42,112 @@
       </div>
     </div>
 
-    <section>
+    <!-- WHATSAPP BANNER -->
+    <section class="whatsapp-banner">
+      <div class="container reveal">
+        <h2>Liever direct contact?</h2>
+        <p>Bel of app me via WhatsApp — ik neem zo snel mogelijk contact met jullie op.</p>
+        <a href="https://wa.me/31659122635" class="btn" target="_blank">WhatsApp 06 5912 2635</a>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="contact-section">
       <div class="container">
-        <div class="contact-grid">
+        <div class="contact-layout">
 
-          <div class="contact-info reveal">
-            <h3>Direct contact</h3>
-            <p>
-              <strong>E-mail</strong><br>
-              <a href="mailto:info@speciallyweddings.nl">info@speciallyweddings.nl</a>
-            </p>
-            <p>
-              <strong>Telefoon &amp; WhatsApp</strong><br>
-              <a href="tel:0659122635">06 5912 2635</a>
-            </p>
-            <p>
-              <strong>Werkgebied</strong><br>
-              Nederland, België &amp; daarbuiten
-            </p>
-            <p>
-              <strong>Reactietijd</strong><br>
-              Binnen 24 uur
-            </p>
+          <div class="contact-visual reveal">
+            <img src="img/contact-sfeer.jpg" alt="Romantisch koppel bij zonsondergang" loading="lazy">
+            <div class="contact-overlay">
+              <div class="contact-details">
+                <h3>Direct contact</h3>
+                <p>
+                  <strong>E-mail</strong><br>
+                  <a href="mailto:info@speciallyweddings.nl">info@speciallyweddings.nl</a>
+                </p>
+                <p>
+                  <strong>Telefoon &amp; WhatsApp</strong><br>
+                  <a href="tel:0659122635">06 5912 2635</a>
+                </p>
+                <p>
+                  <strong>Werkgebied</strong><br>
+                  Nederland, België &amp; daarbuiten
+                </p>
+                <p>
+                  <strong>Reactietijd</strong><br>
+                  Binnen 24 uur
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="contact-form reveal">
-            <div class="whatsapp-cta" style="margin-bottom: 2rem; padding: 1.5rem; border: 2px solid #fff; text-align: center;">
-              <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Liever direct contact?</h3>
-              <p style="margin-bottom: 1rem; opacity: 0.9;">Bel of app ons via WhatsApp — wij nemen contact met u op!</p>
-              <a href="https://wa.me/31659122635" class="btn" target="_blank">WhatsApp 06 5912 2635</a>
-            </div>
-
-          <form action="mailto:info@speciallyweddings.nl" method="post" enctype="text/plain">
-            <div class="form-group">
-              <label for="naam">Naam</label>
-              <input type="text" id="naam" name="naam" required>
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="telefoon">Telefoonnummer</label>
-              <input type="tel" id="telefoon" name="telefoon">
-            </div>
-            <div class="form-group">
-              <label for="datum">Gewenste trouwdatum</label>
-              <input type="date" id="datum" name="datum">
-            </div>
-            <div class="form-group">
-              <label for="bericht">Jullie wensen</label>
-              <textarea id="bericht" name="bericht" placeholder="Vertel me wat jullie zoeken..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Verstuur bericht</button>
-          </form>
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" action="mailto:info@speciallyweddings.nl" method="post" enctype="text/plain">
+              <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefoon">Telefoonnummer</label>
+                <input type="tel" id="telefoon" name="telefoon">
+              </div>
+              <div class="form-group">
+                <label for="datum">Gewenste trouwdatum</label>
+                <input type="date" id="datum" name="datum">
+              </div>
+              <div class="form-group">
+                <label for="bericht">Jullie wensen</label>
+                <textarea id="bericht" name="bericht" placeholder="Vertel me wat jullie zoeken..." required></textarea>
+              </div>
+              <button type="submit" class="btn">Verstuur bericht</button>
+            </form>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="reveal">Veelgestelde vragen</h2>
+        <div class="faq-grid">
+          <article class="faq-item reveal">
+            <h3>Hoe ver van tevoren moeten we boeken?</h3>
+            <p>
+              Dat hangt af van jullie wensen. Populaire data in het hoogseizoen (mei-september)
+              zijn vaak al een jaar van tevoren volgeboekt. Maar ook een last-minute bruiloft
+              is mogelijk — ik heb stellen al binnen 24 uur getrouwd.
+            </p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>Wat kost een eerste gesprek?</h3>
+            <p>
+              Helemaal niets. Het eerste gesprek is altijd vrijblijvend en gratis.
+              We bespreken jullie wensen, ik geef eerlijk advies, en daarna bepalen
+              jullie of je verder wilt gaan. Geen verplichtingen.
+            </p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>Werken jullie ook in het buitenland?</h3>
+            <p>
+              Absoluut. Ik heb al bruiloften georganiseerd in België, Frankrijk, Spanje
+              en Italië. Van papierwerk tot lokale leveranciers: ik regel alle praktische
+              zaken zodat jullie zorgeloos kunnen genieten.
+            </p>
+          </article>
+          <article class="faq-item reveal">
+            <h3>Wat als ik al een locatie heb?</h3>
+            <p>
+              Geen probleem. Ik kan jullie helpen met alleen de ceremonie, of met de
+              organisatie van de rest van de dag. Alles is mogelijk — van volledige
+              planning tot gedeeltelijke ondersteuning.
+            </p>
+          </article>
         </div>
       </div>
     </section>
