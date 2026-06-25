@@ -228,8 +228,9 @@ if (!file_exists($config_pad)) {
     $smtp     = include $config_pad;
 }
 
-// Mailer ID uit site-config meegeven
-$smtp['mailer_id'] = $cfg['mailer_id'] ?? 'WebMail/2.0';
+// Mailer ID en from_email uit site-config meegeven
+$smtp['mailer_id']  = $cfg['mailer_id'] ?? 'WebMail/2.0';
+$smtp['from_email'] = $cfg['email_fallback'] ?? $smtp['gebruiker'] ?? '';
 
 // === DIENST-LABEL ===
 $dienst_label = '';
@@ -249,7 +250,8 @@ if ($fallback) {
     if ($telefoon)     $inhoud .= "\nTelefoon: {$telefoon}";
     if ($dienst_label) $inhoud .= "\nDienst:   {$dienst_label}";
     if ($bericht)      $inhoud .= "\n\nBericht:\n{$bericht}";
-    $headers  = "From: noreply@{$host_fallback}\r\nReply-To: {$email}\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+    $fallback_from = $cfg['email_fallback'] ?? ('noreply@' . $host_fallback);
+    $headers  = "From: {$fallback_from}\r\nReply-To: {$email}\r\nContent-Type: text/plain; charset=UTF-8\r\n";
     $ok = mail($ontvanger, $onderwerp, $inhoud, $headers);
 } else {
     $html_offerte = bouw_offerte_html($naam, $telefoon, $email, $dienst_label, $bericht, $cfg);

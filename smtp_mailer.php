@@ -135,8 +135,10 @@ function smtp_verstuur(
     $naam_encoded = '=?UTF-8?B?' . base64_encode($afzender) . '?=';
     $onderwerp_encoded = '=?UTF-8?B?' . base64_encode($onderwerp) . '?=';
 
+    $from_email = !empty($smtp['from_email']) ? saniteer_header($smtp['from_email']) : $gebruiker;
+
     $headers  = "Date: {$datum}\r\n";
-    $headers .= "From: {$naam_encoded} <{$gebruiker}>\r\n";
+    $headers .= "From: {$naam_encoded} <{$from_email}>\r\n";
     $headers .= "To: {$aan}\r\n";
     if (!empty($reply_to)) {
         $headers .= "Reply-To: {$reply_to}\r\n";
