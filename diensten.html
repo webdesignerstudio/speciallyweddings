@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="site.webmanifest">
+
   <title>Diensten | Specially Weddings</title>
-  <meta name="description" content="Ontdek alle diensten van Specially Weddings. Van 24u trouwen tot foodtrucks, Ibiza-style en buitenlandse bruiloften.">
+  <meta name="description" content="Ontdek alle diensten van Specially Weddings. Trouwambtenaar, bruiloftorganisator, locaties, horeca, kinderattracties en meer. Vraag vrijblijvend een offerte aan.">
+  <link rel="canonical" href="https://speciallyweddings.nl/diensten.html">
+  <meta property="og:title" content="Diensten | Specially Weddings">
+  <meta property="og:description" content="Ontdek alle diensten van Specially Weddings. Trouwambtenaar, bruiloftorganisator, locaties, horeca, kinderattracties en meer.">
+  <meta property="og:image" content="https://speciallyweddings.nl/img/hero-beach-wedding.jpg">
+  <meta property="og:url" content="https://speciallyweddings.nl/diensten.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Diensten | Specially Weddings">
+  <meta name="twitter:description" content="Ontdek alle diensten van Specially Weddings. Trouwambtenaar, bruiloftorganisator, locaties, horeca, kinderattracties en meer.">
+  <meta name="twitter:image" content="https://speciallyweddings.nl/img/hero-beach-wedding.jpg">
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,7 +64,7 @@
 
         <article class="dienst-detail reveal">
           <div class="dienst-detail-img">
-            <img src="img/hero-beach-wedding.jpg" alt="Binnen 24 uur trouwen op het strand" loading="lazy">
+            <picture><source srcset="img/hero-beach-wedding.webp" type="image/webp"><img src="img/hero-beach-wedding.jpg" width="1600" height="1068" alt="Binnen 24 uur trouwen op het strand" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Binnen 24 uur trouwen</h3>
@@ -62,7 +79,7 @@
 
         <article class="dienst-detail reverse reveal">
           <div class="dienst-detail-img">
-            <img src="img/locatie-zaal.jpg" alt="Sfeervolle trouwlocatie en zaal" loading="lazy">
+            <picture><source srcset="img/locatie-zaal.webp" type="image/webp"><img src="img/locatie-zaal.jpg" width="1200" height="724" alt="Sfeervolle trouwlocatie en zaal" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Locaties & Zalen</h3>
@@ -77,7 +94,7 @@
 
         <article class="dienst-detail reveal">
           <div class="dienst-detail-img">
-            <img src="img/oesterman.jpg" alt="Chique catering en oesterman op bruiloft" loading="lazy">
+            <picture><source srcset="img/oesterman.webp" type="image/webp"><img src="img/oesterman.jpg" width="1200" height="800" alt="Chique catering en oesterman op bruiloft" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Horeca & Foodtrucks</h3>
@@ -92,7 +109,7 @@
 
         <article class="dienst-detail reverse reveal">
           <div class="dienst-detail-img">
-            <img src="img/kinderattractie.jpg" alt="Kinderattracties en entertainment op bruiloft" loading="lazy">
+            <picture><source srcset="img/kinderattractie.webp" type="image/webp"><img src="img/kinderattractie.jpg" width="1200" height="1807" alt="Kinderattracties en entertainment op bruiloft" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Kinderattracties</h3>
@@ -107,7 +124,7 @@
 
         <article class="dienst-detail reveal">
           <div class="dienst-detail-img">
-            <img src="img/ibiza-lounge.jpg" alt="Jouw unieke bruiloft stijl" loading="lazy">
+            <picture><source srcset="img/ibiza-lounge.webp" type="image/webp"><img src="img/ibiza-lounge.jpg" width="1200" height="1800" alt="Jouw unieke bruiloft stijl" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Jouw stijl, jouw dag</h3>
@@ -122,7 +139,7 @@
 
         <article class="dienst-detail reverse reveal">
           <div class="dienst-detail-img">
-            <img src="img/buitenland-trouwen.jpg" alt="Trouwen in het buitenland" loading="lazy">
+            <picture><source srcset="img/buitenland-trouwen.webp" type="image/webp"><img src="img/buitenland-trouwen.jpg" width="1200" height="800" alt="Trouwen in het buitenland" loading="lazy"></picture>
           </div>
           <div class="dienst-detail-text">
             <h3>Binnen- & Buitenland</h3>
@@ -150,10 +167,15 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden.</p>
+      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden. <a href="privacy.html">Privacyverklaring</a></p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <div class="cookie-consent" role="dialog" aria-label="Cookie melding">
+    <p>Wij gebruiken alleen functionele cookies. Door verder te gaan accepteer je dit. <a href="privacy.html">Meer info</a></p>
+    <button class="btn" type="button">Akkoord</button>
+  </div>
 </body>
 </html>

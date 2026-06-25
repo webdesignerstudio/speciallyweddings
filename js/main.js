@@ -53,4 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Cookie consent
+  const cookieBanner = document.querySelector('.cookie-consent');
+  const cookieBtn = document.querySelector('.cookie-consent .btn');
+  if (cookieBanner && cookieBtn) {
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      cookieBanner.classList.add('hidden');
+    }
+    cookieBtn.addEventListener('click', function () {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBanner.classList.add('hidden');
+    });
+  }
+
 });

@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="site.webmanifest">
+
   <title>Over mij | Specially Weddings</title>
-  <meta name="description" content="Leer Babs kennen van Specially Weddings. Trouwambtenaar en bruiloftorganisator met een missie: jullie perfecte dag, zonder stress.">
+  <meta name="description" content="Leer Babs kennen — trouwambtenaar en bruiloftorganisator met een missie: jullie perfecte dag, zonder stress. Persoonlijk, transparant en maatwerk.">
+  <link rel="canonical" href="https://speciallyweddings.nl/over-mij.html">
+  <meta property="og:title" content="Over mij | Specially Weddings">
+  <meta property="og:description" content="Leer Babs kennen — trouwambtenaar en bruiloftorganisator met een missie: jullie perfecte dag, zonder stress. Persoonlijk, transparant en maatwerk.">
+  <meta property="og:image" content="https://speciallyweddings.nl/img/over-mij.jpg">
+  <meta property="og:url" content="https://speciallyweddings.nl/over-mij.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Over mij | Specially Weddings">
+  <meta name="twitter:description" content="Leer Babs kennen — trouwambtenaar en bruiloftorganisator met een missie: jullie perfecte dag, zonder stress.">
+  <meta name="twitter:image" content="https://speciallyweddings.nl/img/over-mij.jpg">
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -46,7 +63,7 @@
       <div class="container">
         <div class="over-mij-grid">
           <div class="over-mij-img reveal">
-            <img src="img/over-mij.jpg" alt="Babs van Specially Weddings" loading="lazy">
+            <picture><source srcset="img/over-mij.webp" type="image/webp"><img src="img/over-mij.jpg" width="800" height="1198" alt="Babs van Specially Weddings" loading="lazy"></picture>
           </div>
           <div class="over-mij-text reveal">
             <h2>Wie ben ik?</h2>
@@ -139,10 +156,15 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden.</p>
+      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden. <a href="privacy.html">Privacyverklaring</a></p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <div class="cookie-consent" role="dialog" aria-label="Cookie melding">
+    <p>Wij gebruiken alleen functionele cookies. Door verder te gaan accepteer je dit. <a href="privacy.html">Meer info</a></p>
+    <button class="btn" type="button">Akkoord</button>
+  </div>
 </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "name": "Specially Weddings",
+  "short_name": "Specially",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "img/hero-beach-wedding.jpg",
+      "sizes": "1600x1068",
+      "type": "image/jpeg"
+    }
+  ]
+}

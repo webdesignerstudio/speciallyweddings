@@ -728,6 +728,58 @@ section {
   display: block;
 }
 
+/* Cookie Consent */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  border-top: 1px solid #333;
+  padding: 12px 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 9999;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.cookie-consent.hidden {
+  transform: translateY(100%);
+}
+
+.cookie-consent p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cookie-consent a {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.cookie-consent a:hover {
+  opacity: 1;
+}
+
+.cookie-consent .btn {
+  font-size: 12px;
+  padding: 6px 16px;
+  border-width: 1px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .cookie-consent {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
 /* Contact Page */
 
 /* WhatsApp Banner */

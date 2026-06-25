@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="site.webmanifest">
+
   <title>Contact | Specially Weddings</title>
-  <meta name="description" content="Neem contact op met Specially Weddings. Bel, app of mail Babs voor een vrijblijvend gesprek.">
+  <meta name="description" content="Neem contact op met Babs van Specially Weddings. Bel, app of mail voor een vrijblijvend gesprek over jullie bruiloft. Reactie binnen 24 uur.">
+  <link rel="canonical" href="https://speciallyweddings.nl/contact.html">
+  <meta property="og:title" content="Contact | Specially Weddings">
+  <meta property="og:description" content="Neem contact op met Babs van Specially Weddings. Bel, app of mail voor een vrijblijvend gesprek over jullie bruiloft. Reactie binnen 24 uur.">
+  <meta property="og:image" content="https://speciallyweddings.nl/img/contact-sfeer.jpg">
+  <meta property="og:url" content="https://speciallyweddings.nl/contact.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Specially Weddings">
+  <meta name="twitter:description" content="Neem contact op met Babs van Specially Weddings. Bel, app of mail voor een vrijblijvend gesprek over jullie bruiloft.">
+  <meta name="twitter:image" content="https://speciallyweddings.nl/img/contact-sfeer.jpg">
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -57,7 +74,7 @@
         <div class="contact-layout">
 
           <div class="contact-visual reveal">
-            <img src="img/contact-sfeer.jpg" alt="Romantisch koppel bij zonsondergang" loading="lazy">
+            <picture><source srcset="img/contact-sfeer.webp" type="image/webp"><img src="img/contact-sfeer.jpg" width="1200" height="800" alt="Romantisch koppel bij zonsondergang" loading="lazy"></picture>
             <div class="contact-overlay">
               <div class="contact-details">
                 <h3>Direct contact</h3>
@@ -156,10 +173,15 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden.</p>
+      <p>&copy; 2026 Specially Weddings. Alle rechten voorbehouden. <a href="privacy.html">Privacyverklaring</a></p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <div class="cookie-consent" role="dialog" aria-label="Cookie melding">
+    <p>Wij gebruiken alleen functionele cookies. Door verder te gaan accepteer je dit. <a href="privacy.html">Meer info</a></p>
+    <button class="btn" type="button">Akkoord</button>
+  </div>
 </body>
 </html>
