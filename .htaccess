@@ -42,3 +42,14 @@ AddType image/webp .webp
   Order allow,deny
   Deny from all
 </FilesMatch>
+<Files "site-config.php">
+  Order allow,deny
+  Deny from all
+</Files>
+<FilesMatch "^\.rate">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ErrorDocument 403 -> 404 (verberg het bestaan van beheermap)
+ErrorDocument 403 /404.html

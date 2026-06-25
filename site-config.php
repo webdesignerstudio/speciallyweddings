@@ -1,0 +1,22 @@
+<?php
+return [
+    'bedrijfsnaam'   => 'Specially Weddings',
+    'telefoon'       => '0659122635',
+    'email_fallback' => 'info@speciallyweddings.nl',
+    'locatie'        => 'Nederland, België & daarbuiten',
+    'website_url'    => 'https://speciallyweddings.nl/',
+    'kleur_primair'  => '#000000',
+    'kleur_header_bg'=> '#000000',
+    'kleur_header_fg'=> '#ffffff',
+    'kleur_tel_fg'   => '#000000',
+    'dash_kleur'     => '#000000',
+    'beheer_map'     => 'beheer-sws',
+    'beheer_hash'    => '$2y$12$u558X3Rgx9O.EfjQxlvVY.TjqV',
+    'veld_telefoon'  => true,
+    'veld_dienst'    => false,
+    'veld_bericht'   => true,
+    'diensten'       => [],
+    'mailer_id'      => 'WebMail/2.0',
+    'branche'        => 'default',
+    'preview_bericht'=> 'Hallo, ik ben geïnteresseerd in jullie diensten en zou graag meer informatie ontvangen over een bruiloft. Kunnen jullie contact met mij opnemen voor een vrijblijvend gesprek?',
+];

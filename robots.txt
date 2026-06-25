@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /website-backup-voor-optimalisatie/
+Disallow: /beheer-sws/
 Disallow: /img/hero-beach-wedding-backup.jpg
 
 Sitemap: https://speciallyweddings.nl/sitemap.xml

@@ -99,7 +99,13 @@
           </div>
 
           <div class="contact-form-wrap reveal">
-            <form class="contact-form" action="mailto:info@speciallyweddings.nl" method="post" enctype="text/plain">
+            <form class="contact-form" id="contactForm" action="mail.php" method="POST">
+              <input type="hidden" name="csrf_token" id="csrf_token" value="">
+              <!-- Honeypot -->
+              <div style="display:none;" aria-hidden="true">
+                <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+                <input type="text" name="bedrijfsnaam_extra" tabindex="-1" autocomplete="off">
+              </div>
               <div class="form-group">
                 <label for="naam">Naam</label>
                 <input type="text" id="naam" name="naam" required>
@@ -120,7 +126,8 @@
                 <label for="bericht">Jullie wensen</label>
                 <textarea id="bericht" name="bericht" placeholder="Vertel me wat jullie zoeken..." required></textarea>
               </div>
-              <button type="submit" class="btn">Verstuur bericht</button>
+              <button type="submit" class="btn" id="submitBtn">Verstuur bericht</button>
+              <p id="formFeedback" style="margin-top:1rem; opacity:0.9; min-height:1.5em;"></p>
             </form>
           </div>
 
@@ -178,6 +185,56 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+  (function() {
+    // Haal CSRF token op bij pageload
+    fetch('mail.php?csrf=1')
+      .then(r => r.json())
+      .then(data => {
+        if (data.csrf) document.getElementById('csrf_token').value = data.csrf;
+      })
+      .catch(() => {});
+
+    // AJAX formulier submit
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('formFeedback');
+    const submitBtn = document.getElementById('submitBtn');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Bezig met versturen...';
+      feedback.textContent = '';
+      feedback.style.color = '';
+
+      const formData = new FormData(form);
+      fetch('mail.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(r => r.json())
+      .then(data => {
+        if (data.success) {
+          feedback.textContent = data.message || 'Uw aanvraag is verzonden. We nemen zo snel mogelijk contact met u op!';
+          feedback.style.color = '#4caf50';
+          form.reset();
+        } else {
+          feedback.textContent = data.message || 'Er is iets misgegaan. Probeer het opnieuw.';
+          feedback.style.color = '#f44336';
+        }
+      })
+      .catch(() => {
+        feedback.textContent = 'Er is een netwerkfout opgetreden. Probeer het later opnieuw.';
+        feedback.style.color = '#f44336';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Verstuur bericht';
+      });
+    });
+  })();
+  </script>
 
   <div class="cookie-consent" role="dialog" aria-label="Cookie melding">
     <p>Wij gebruiken alleen functionele cookies. Door verder te gaan accepteer je dit. <a href="privacy.html">Meer info</a></p>
