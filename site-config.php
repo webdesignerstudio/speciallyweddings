@@ -11,7 +11,7 @@ return [
     'kleur_tel_fg'   => '#000000',
     'dash_kleur'     => '#000000',
     'beheer_map'     => 'beheer-sws',
-    'beheer_hash'    => '$2y$12$u558X3Rgx9O.EfjQxlvVY.TjqV',
+    'beheer_hash'    => '$2y$12$sU7qdF.Ix71eiBIekL6RB.3jYD3JENfuqUIdZ/XslTq/ZCRQ/9B3.',
     'veld_telefoon'  => true,
     'veld_dienst'    => false,
     'veld_bericht'   => true,
